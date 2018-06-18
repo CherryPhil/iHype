@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="icon" href="images/noBGLogo.png">
+        <title>iHype - <%= title %></title>
+        <% include ./includes/javascript %>
+        <% include ./includes/stylesheet %>
+    </head>
+    <body>
+        <% include ./includes/header %>
+
+        <% for(var i = 0; i<10; i++){ %>
+            <div class="well">
+                <p>HOLA</p>
+            </div>
+        <% } %>
+
+        <% include ./includes/footer %>
+    </body>
+</html>

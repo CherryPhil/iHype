@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    font-family: "Bahnschrift Light";
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background-color: rgb(17, 10, 10);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    min-height: 90px;
+}
+
+/* Logo Picture */
+#logoPic {
+    display: none;
+}
+
+/* Log In & Sign Up */
+.loggerContainer {
+    font-size: 18px;
+    margin-top: 20px;
+}
+#login, #signup {
+    color: white;
+}
+#login:hover, #signup:hover {
+    color: rgb(187, 187, 187);
+}
+
+/* ul & li */
+#main-nav {
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+#main-nav li {
+    text-align: center;
+    margin: 15px auto;
+    font-size: 15px;
+}
+
+/* Logo and Links */
+.nav-links, #logo {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+#logo:hover, .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
+}
+.logoContainer {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+}
+#logo {
+    width: 120px;
+}
+
+/* Toggle Navbar */
+#navbar-toggle {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+    z-index: 100;
+}
+#navbar-toggle:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 120px;
+        align-items: center;
+    }
+    #main-nav {
+        display: flex !important;
+        margin-right: 30px;
+        margin-top: 80px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    #main-nav li {
+        margin: 0;
+    }
+    .nav-links {
+        margin-left: 40px;
+    }
+    #logo {
+        margin-top: 0;
+    }
+    #navbar-toggle {
+        display: none !important;
+    }
+    .loggerContainer {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        text-align: right;
+    }
+    #logoPic {
+        width: 130px;
+        position: absolute;
+        display: block;
+    }
+    
+}

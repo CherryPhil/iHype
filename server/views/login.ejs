@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="icon" href="images/noBGLogo.png">
+        <title>iHype - <%= title %></title>
+        <% include ./includes/javascript %>
+        <% include ./includes/stylesheet %>
+        <link rel="stylesheet" href="css/login.css">
+        <script src="js/login.js"></script>
+    </head>
+    <body>
+
+        <div id="goBackHome">
+            <span class="glyphicon glyphicon-triangle-left"></span>
+            <a href="/">
+                Back to iHype
+            </a>
+        </div>
+
+        <div class="container">
+
+            <div class="col-sm-6">
+            </div>
+            <div class="col-sm-6">
+                <p class="titleTitle" id="colAppear">Log in!</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 leftCont">
+                    <img class="logo" src="images/noBGLogo.png">
+                    <br>
+                    <a href="/">
+                        <img class="logoImage" src="images/iHype.png">
+                    </a>
+                </div>
+                <div class="col-sm-6 rightCont">
+
+                    <p class="titleTitle" id="colsmAppear">Log in!</p>
+
+                    <div id="loginCont">
+                        <form action="/">
+                            <input type="email" class="inputs" placeholder="Email" required>
+                            <br><br>
+                            <input type="password" class="inputs" placeholder="Password" required>
+                            <br><br>
+                            <input type="submit" class="continueButton" id="loginButton" value="Login">
+                        </form>
+                    </div>
+
+                    <div id="registerCont">
+                        <form action="/">
+                            <input type="email" class="inputs" placeholder="Email" required>
+                            <br><br>
+                            <input type="password" class="inputs" placeholder="Password" required>
+                            <br><br>
+                            <input type="password" class="inputs" placeholder="Confirm Password" required>
+                            <br><br>
+                            <input type="submit" class="continueButton" id="registerButton" value="Register">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row secondRow">
+                <p>Need an account? <span id="changeButton" onclick="changeFunc()">Sign up now!</span></p>
+            </div>
+            
+        </div>
+
+    </body>
+</html>

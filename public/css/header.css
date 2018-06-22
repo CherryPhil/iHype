@@ -11,26 +11,29 @@
     text-align: center;
     width: 100%;
     min-height: 90px;
+    border-radius: 0 !important;
 }
 
-/* Logo Picture */
+/* Logo Picture 0.0 */
 #logoPic {
     display: none;
 }
 
-/* Log In & Sign Up */
+/* Log In */
 .loggerContainer {
     font-size: 18px;
     margin-top: 20px;
 }
-#login, #signup {
+#login, #login:focus {
     color: white;
+    text-decoration: none;
 }
-#login:hover, #signup:hover {
+#login:hover {
     color: rgb(187, 187, 187);
+    text-decoration: none;
 }
 
-/* ul & li */
+/* Categories */
 #main-nav {
     list-style-type: none;
     display: none;
@@ -43,22 +46,36 @@
     margin: 15px auto;
     font-size: 15px;
 }
+.leftCate ul, .rightCate ul {
+    list-style-type: none;
+}
+.leftCate p, .rightCate p {
+    margin-top: 20px;
+    color: white;
+    font-size: 16px;
+}
 
-/* Logo and Links */
-.nav-links, #logo {
+/* Logo & Links */
+.nav-links, .categories {
+    cursor: pointer;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.7);
 }
-#logo:hover, .nav-links:hover {
+.nav-links:hover, .categories:hover, .nav-links:focus, .categories:focus {
+    text-decoration: none;
     color: rgba(255, 255, 255, 1);
 }
 .logoContainer {
     position: absolute;
     width: 100%;
     top: 10px;
+    z-index: 200px;
 }
 #logo {
     width: 120px;
+}
+#logoAtag {
+    display: inline-block;
 }
 
 /* Toggle Navbar */
@@ -91,22 +108,18 @@
         justify-content: flex-end;
     }
     #main-nav li {
-        margin: 0;
+        margin-left: 20px;
+        text-align: left;
     }
     .nav-links {
         margin-left: 40px;
     }
-    #logo {
-        margin-top: 0;
-    }
     #navbar-toggle {
         display: none !important;
     }
-    .loggerContainer {
-        position: absolute;
-        right: 20px;
-        top: 10px;
-        text-align: right;
+    /* Logos */
+    #logo {
+        margin-top: 0;
     }
     #logoPic {
         width: 130px;
@@ -114,4 +127,37 @@
         display: block;
     }
     
+    /* Log in Container */
+    .loggerContainer {
+        position: absolute;
+        right: 30px;
+        top: 10px;
+        text-align: right;
+    }
+
+    /* Categories */
+    #menCate, #womenCate {
+        width: 350px;
+        border-top: 5px solid rgb(228, 39, 39);
+    }
+    .leftCate {
+        width: 50%;
+        float: left;
+        padding: 0 10px 10px 10px;
+    }
+    .rightCate {
+        width: 50%;
+        float: right;
+        padding: 0 10px 10px 10px;
+    }
+    .leftCate p, .rightCate p {
+        margin-left: 10px;
+        color: black;
+    }
+    .categories {
+        color: black;
+    }
+    .categories:hover {
+        color: gray;
+    }
 }

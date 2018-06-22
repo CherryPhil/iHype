@@ -1,6 +1,7 @@
 /* Footer */
 .main-footer {
     background-color: rgb(17, 10, 10);
+    margin-top: 40px;
 }
 
 /* Footer Top */
@@ -9,20 +10,20 @@
     padding-top: 30px;
     color: #808080;
 }
-ul {
+.footerUl {
     list-style-type: none;
 }
-a, a:focus {
+.footerA, .footerA:focus {
     text-decoration: none;
     color: #808080;
 }
-a:hover {
+.footerA:hover {
     text-decoration: none;
     color: white;
     transition: all .1s ease-in-out;
 }
 .ourEmail {
-    color: rgb(172, 36, 0);
+    color: rgb(228, 39, 39);
 }
 .ourEmail:hover {
     color: white;
@@ -33,7 +34,7 @@ strong {
     font-size: 15px;
 }
 .glyphicon-menu-right {
-    color: rgb(172, 36, 0);
+    color: rgb(228, 39, 39);
 }
 .paymentMethodContainer {
     margin-top: 35px;

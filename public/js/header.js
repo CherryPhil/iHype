@@ -11,30 +11,33 @@ navbarToggle.click(function() {
 });
 
 window.onresize = function(){
-    console.log($(window).width());
-    if($(window).width() >= 768){
-        $(".Categories").attr("data-toggle", "dropdown")
-        .attr("data-target", "")
-        .attr("class", "nav-links Categories");
-        $("#demo").attr("class", "dropdown-menu")
+    if($("#navbar-toggle").css("display") == "none"){
+        $(".nav-links").attr("data-toggle", "dropdown")
+        .attr("data-target", "");
+        $(".menCate").attr("class", "nav-links menCate");
+        $(".womenCate").attr("class", "nav-links womenCate");
+        $(".collapse").attr("class", "dropdown-menu")
         .attr("style", "");
     }else {
-        $(".Categories").attr("data-toggle", "collapse")
-        .attr("data-target", "#demo");
-        $("#demo").attr("class", "collapse")
+        $(".nav-links").attr("data-toggle", "collapse");
+        $(".menCate").attr("data-target", "#menCate");
+        $(".womenCate").attr("data-target", "#womenCate");
+        $(".dropdown-menu").attr("class", "collapse");
     }
 };
 
 window.onload = function(){
-    console.log($(window).width());
-    if($(window).width() >= 768){
-        $(".Categories").attr("data-toggle", "dropdown")
-        .attr("data-target", "")
-        .attr("class", "nav-links Categories");
-        $("#demo").attr("class", "dropdown-menu");
+    if($("#navbar-toggle").css("display") == "none"){
+        $(".nav-links").attr("data-toggle", "dropdown")
+        .attr("data-target", "");
+        $(".menCate").attr("class", "nav-links menCate");
+        $(".womenCate").attr("class", "nav-links womenCate");
+        $(".collapse").attr("class", "dropdown-menu")
+        .attr("style", "");
     }else {
-        $(".Categories").attr("data-toggle", "collapse")
-        .attr("data-target", "#demo");
-        $("#demo").attr("class", "collapse")
+        $(".nav-links").attr("data-toggle", "collapse");
+        $(".menCate").attr("data-target", "#menCate");
+        $(".womenCate").attr("data-target", "#womenCate");
+        $(".dropdown-menu").attr("class", "collapse");
     }
 };

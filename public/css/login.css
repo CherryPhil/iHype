@@ -95,6 +95,9 @@ body {
     cursor: pointer;
     color: white;
 }
+#errorText {
+    color: white;
+}
 
 /* Register Container */
 #registerCont {

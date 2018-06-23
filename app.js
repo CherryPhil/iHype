@@ -1,35 +1,23 @@
-var express = require("express")
-var path = require('path');
+var express = require("express");
 var app = express();
+var bodyParser = require("body-parser");
+var path = require('path');
 
 app.set('views', path.join(__dirname, 'server/views'));
 app.set('view engine', 'ejs');
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 
-app.get("/login", (req, res) => {
-    console.log(req);
-    res.render("login", {
-        title: "Login"
-    })
-})
+var sugi = require("./server/controllers/sugiControl");
 
-app.get("/", (req, res) => {
-    res.render("home", {
-        title: "Home"
-    })
-})
+app.get("/login", sugi.openLogin);
+app.get("/", sugi.openHome);
+app.get("/terms&conditions", sugi.openTermsConditions);
+app.get("/privacy", sugi.openPrivacy);
 
-app.get("/terms&conditions", (req, res) => {
-    res.render("terms&conditions", {
-        title: "Terms & Conditions"
-    })
-})
+app.post("/login", sugi.login);
+app.post("/register", sugi.register);
 
-app.get("/privacy", (req, res) => {
-    res.render("privacy", {
-        title: "Privacy"
-    })
-})
-
-app.listen(3000)
+app.listen(3000);

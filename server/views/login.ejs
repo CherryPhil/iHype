@@ -7,7 +7,6 @@
         <% include ./includes/javascript %>
         <% include ./includes/stylesheet %>
         <link rel="stylesheet" href="css/login.css">
-        <script src="js/login.js"></script>
     </head>
     <body>
 
@@ -39,22 +38,25 @@
                     <p class="titleTitle" id="colsmAppear">Log in!</p>
 
                     <div id="loginCont">
-                        <form action="/">
-                            <input type="email" class="inputs" placeholder="Email" required>
+                        <form action="/login" method="post">
+                            <input type="email" name="logEmail" class="inputs" placeholder="Email" required>
                             <br><br>
-                            <input type="password" class="inputs" placeholder="Password" required>
+                            <input type="password" name="logPass" class="inputs" placeholder="Password" required>
                             <br><br>
                             <input type="submit" class="continueButton" id="loginButton" value="Login">
                         </form>
                     </div>
 
                     <div id="registerCont">
-                        <form action="/">
-                            <input type="email" class="inputs" placeholder="Email" required>
+                        <% if (error != ""){ %>
+                            <p id="errorText"><%= error %></p>
+                        <% } %>
+                        <form action="/register" method="post">
+                            <input type="email" id="regEmail" name="regEmail" class="inputs" placeholder="Email" required>
                             <br><br>
-                            <input type="password" class="inputs" placeholder="Password" required>
+                            <input type="password" name="regPass" class="inputs" placeholder="Password" required>
                             <br><br>
-                            <input type="password" class="inputs" placeholder="Confirm Password" required>
+                            <input type="password" name="regConPass" class="inputs" placeholder="Confirm Password" required>
                             <br><br>
                             <input type="submit" class="continueButton" id="registerButton" value="Register">
                         </form>
@@ -69,5 +71,6 @@
             
         </div>
 
+        <script src="js/login.js"></script>
     </body>
 </html>
